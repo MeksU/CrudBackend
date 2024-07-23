@@ -13,6 +13,7 @@ import pl.meksu.campaignrud.dto.CampaignDTO;
 import pl.meksu.campaignrud.exception.DataNotFoundException;
 import pl.meksu.campaignrud.exception.InsufficientFundsException;
 import pl.meksu.campaignrud.model.Campaign;
+import pl.meksu.campaignrud.model.Town;
 import pl.meksu.campaignrud.model.User;
 import pl.meksu.campaignrud.repository.CampaignRepository;
 import pl.meksu.campaignrud.repository.UserRepository;
@@ -121,7 +122,7 @@ class CampaignServiceTest {
 	@Test
 	void createCampaignInsufficientFunds() {
 		Long userId = 1L;
-		CampaignDTO campaignDTO = new CampaignDTO("Test Campaign", "keywords", 10.0, 300.0, true, "Town", 5, userId);
+		CampaignDTO campaignDTO = new CampaignDTO("Test Campaign", "keywords", 10.0, 300.0, true, Town.LIVERPOOL, 5, userId);
 
 		User user = new User();
 		user.setFunds(200.0);
