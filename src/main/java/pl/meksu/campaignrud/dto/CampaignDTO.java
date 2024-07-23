@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pl.meksu.campaignrud.model.Town;
 
 @Data
 @NoArgsConstructor
@@ -29,7 +30,7 @@ public class CampaignDTO {
     private Boolean status;
 
     @NotNull(message = "Town is mandatory.")
-    private String town;
+    private Town town;
 
     @NotNull(message = "Radius is mandatory.")
     @Min(value = 1, message = "Radius must be greater than 0.")

@@ -30,8 +30,9 @@ public class Campaign {
     @Column(nullable = false)
     private Boolean status;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private String town;
+    private Town town;
 
     @Column(nullable = false)
     private Integer radius;
