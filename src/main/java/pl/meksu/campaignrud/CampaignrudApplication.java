@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 public class CampaignrudApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(CampaignrudApplication.class, args);
 	}
 }

@@ -29,7 +29,7 @@ public class UserService {
     }
 
     public User createUser(User user) {
-        user.setFunds(100000.0);
+        user.setFunds(25000.0);
         String password = passwordEncoder.encode(user.getPassword());
         user.setPassword(password);
         return userRepository.save(user);
